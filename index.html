@@ -41,8 +41,17 @@
         }
 
         .header p {
+            position: absolute; /* Position relative to the header */
+            bottom: 20px; /* Distance from the bottom of the header */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust horizontal alignment */
+            color: #FFD700; /* Golden color */
             font-size: 20px; /* Adjust size as needed */
-            margin-top: 10px;
+            font-weight: bold; /* Make text bold */
+            text-align: center;
+            z-index: 2; /* Ensure it appears above background */
+            text-shadow: 2px 2px 5px black; /* Add black shadow for contrast */
+            margin: 0; /* Remove default margins */
         }
         /* WhatsApp Button */
         .whatsapp-btn {
