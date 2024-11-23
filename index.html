@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifth Gear Car Rental</title>
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Section */
+        .header {
+            background: url('file:///C:/Users/fifth/OneDrive/Desktop/WEBSITE/heading%20background.jpg') no-repeat center center/cover;
+            height: 80vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 50px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 18px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            background-color: #25d366;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128c7e;
+        }
+
+        /* Search Bar Section */
+        .search-bar {
+            margin-top: 30px;
+        }
+        .search-bar input {
+            width: 60%;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+        .search-bar button {
+            padding: 15px;
+            background-color: #ff9900;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #cc7a00;
+        }
+
+        /* Car Brand Section */
+        .brand-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            justify-items: center;
+        }
+        .brand-card {
+            width: 150px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .brand-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .brand-card img:hover {
+            transform: scale(1.2);
+        }
+        .brand-card p {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Review Section */
+        .reviews-section {
+            background-color: #f4f4f4;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .review-card {
+            background-color: white;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: inline-block;
+        }
+        .review-card p {
+            font-size: 16px;
+            color: #333;
+        }
+        .review-card .reviewer-name {
+            font-weight: bold;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .search-bar input {
+                width: 80%;
+            }
+            .brand-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .brand-card {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<div class="header">
+    <h1>Fifth Gear Car Rental</h1>
+    <p>Your dream car is just a click away</p>
+    <p>Address: Jumeirah, Dubai, United Arab Emirates</p>
+    <a href="https://wa.me/971501234567" class="whatsapp-btn">Contact Us on WhatsApp</a>
+</div>
+
+<!-- Search Bar Section -->
+<div class="search-bar" style="text-align: center;">
+    <input type="text" id="searchBar" placeholder="Search for a car model...">
+    <button onclick="searchCar()">Search</button>
+</div>
+
+<!-- Car Brand Section -->
+<div class="brand-section">
+    <h2>Select Your Car Brand</h2>
+    <div class="brand-grid">
+        <!-- Audi -->
+        <div class="brand-card" onclick="location.href='audi.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\audi-logo-2016-640.png" alt="Audi">
+            <p>Audi</p>
+        </div>
+        <!-- Bentley -->
+        <div class="brand-card" onclick="location.href='bentley.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\bentley-logo-2002-640.png" alt="Bentley">
+            <p>Bentley</p>
+        </div>
+        <!-- BMW -->
+        <div class="brand-card" onclick="location.href='bmw.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\bmw-logo-2020-gray.png" alt="BMW">
+            <p>BMW</p>
+        </div>
+        <!-- Cadillac -->
+        <div class="brand-card" onclick="location.href='cadillac.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\cadillac-logo-2021-full-download.png" alt="Cadillac">
+            <p>Cadillac</p>
+        </div>
+        <!-- Chevrolet -->
+        <div class="brand-card" onclick="location.href='chevrolet.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\Chevrolet-logo-2013-2560x1440.png" alt="Chevrolet">
+            <p>Chevrolet</p>
+        </div>
+        <!-- Ferrari -->
+        <div class="brand-card" onclick="location.href='ferrari.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\ferrari-logo-2002-640.png" alt="Ferrari">
+            <p>Ferrari</p>
+        </div>
+        <!-- Ford -->
+        <div class="brand-card" onclick="location.href='ford.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\ford-logo-2017-download.png" alt="Ford">
+            <p>Ford</p>
+        </div>
+        <!-- GMC -->
+        <div class="brand-card" onclick="location.href='gmc.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\GMC-logo-640x145.jpg" alt="GMC">
+            <p>GMC</p>
+        </div>
+        <!-- Kia -->
+        <div class="brand-card" onclick="location.href='kia.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\Kia-logo-2560x1440.png" alt="Kia">
+            <p>Kia</p>
+        </div>
+        <!-- Lamborghini -->
+        <div class="brand-card" onclick="location.href='lamborghini.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\lamborghini-logo-1998-640.png" alt="Lamborghini">
+            <p>Lamborghini</p>
+        </div>
+        <!-- Land Rover -->
+        <div class="brand-card" onclick="location.href='land-rover.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\Land-Rover-logo-2011-1920x1080.png" alt="Land Rover">
+            <p>Land Rover</p>
+        </div>
+        <!-- McLaren -->
+        <div class="brand-card" onclick="location.href='mclaren.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\McLaren-logo-2002-2560x1440.png" alt="McLaren">
+            <p>McLaren</p>
+        </div>
+        <!-- Mercedes-Benz -->
+        <div class="brand-card" onclick="location.href='mercedes-benz.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\Mercedes-Benz-logo-2011-1920x1080.png" alt="Mercedes-Benz">
+            <p>Mercedes-Benz</p>
+        </div>
+        <!-- Nissan -->
+        <div class="brand-card" onclick="location.href='nissan.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\nissan-logo-2020-black-show.png" alt="Nissan">
+            <p>Nissan</p>
+        </div>
+        <!-- Porsche -->
+        <div class="brand-card" onclick="location.href='porsche.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\porsche-logo-1994-full-640.png" alt="Porsche">
+            <p>Porsche</p>
+        </div>
+        <!-- Rolls Royce -->
+        <div class="brand-card" onclick="location.href='rolls-royce.html'">
+            <img src="C:\Users\fifth\OneDrive\Desktop\WEBSITE\Rolls-Royce-logo-2048x2048.png" alt="Rolls Royce">
+            <p>Rolls Royce</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    <p>&copy; 2024 Fifth Gear Car Rental | <a href="https://wa.me/971501234567">Contact Us on WhatsApp</a></p>
+    <p>Address: Jumeirah, Dubai
