@@ -23,15 +23,26 @@
             justify-content: center;
             position: relative;
         }
-        .header h1 {
-            font-size: 50px;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+        .header h1, .header p {
+            position: absolute; /* Position relative to the header */
+            bottom: 60px; /* Distance from the bottom of the header */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust horizontal alignment */
+            color: #FFD700; /* Golden color */
+            text-align: center;
+            z-index: 2;
+            margin: 0;
+            text-shadow: 2px 2px 5px black; /* Black shadow for contrast */
         }
-        .header p {
-            font-size: 18px;
-            margin: 10px 0;
+
+        .header h1 {
+            font-size: 50px; /* Adjust size as needed */
             font-weight: bold;
+        }
+
+        .header p {
+            font-size: 20px; /* Adjust size as needed */
+            margin-top: 10px;
         }
         /* WhatsApp Button */
         .whatsapp-btn {
